@@ -1,0 +1,714 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EA1E1D2A3052721200110B87 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EA1E1D753052806200110B87 /* package.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
+		EA1E1D763052806F00110B87 /* vite.config.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = vite.config.js; sourceTree = "<group>"; };
+		EA1E1D7B305280D900110B87 /* main.jsx */ = {isa = PBXFileReference; lastKnownFileType = text; path = main.jsx; sourceTree = "<group>"; };
+		EA1E1D7C305280EE00110B87 /* App.jsx */ = {isa = PBXFileReference; lastKnownFileType = text; path = App.jsx; sourceTree = "<group>"; };
+		EA1E1D7F305289C100110B87 /* Login.jsx */ = {isa = PBXFileReference; lastKnownFileType = text; path = Login.jsx; sourceTree = "<group>"; };
+		EA1E1D80305289D000110B87 /* Dashboard.jsx */ = {isa = PBXFileReference; lastKnownFileType = text; path = Dashboard.jsx; sourceTree = "<group>"; };
+		EA1E1D81305289DE00110B87 /* Upload.jsx */ = {isa = PBXFileReference; lastKnownFileType = text; path = Upload.jsx; sourceTree = "<group>"; };
+		EA1E1D82305289ED00110B87 /* Findings.jsx */ = {isa = PBXFileReference; lastKnownFileType = text; path = Findings.jsx; sourceTree = "<group>"; };
+		EA1E1D8330528A0C00110B87 /* Remediation.jsx */ = {isa = PBXFileReference; lastKnownFileType = text; path = Remediation.jsx; sourceTree = "<group>"; };
+		EA1E1DB630528DE100110B87 /* api.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = api.js; sourceTree = "<group>"; };
+		EA1E1DB830528DFD00110B87 /* globals.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = globals.css; sourceTree = "<group>"; };
+		EA1E1DC130529F9400110B87 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		EA1E1DC23052A0BE00110B87 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EA1E1DC33052A0D500110B87 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		EA1E1DC43052A0F900110B87 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = .gitignore; sourceTree = "<group>"; };
+		EA1E1DCD3052A30300110B87 /* docker-compose.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "docker-compose.yml"; sourceTree = "<group>"; };
+		EA1E30613053260D00110B87 /* SIH26155 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SIH26155; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA1E436D3053266500110B87 /* AttackPathGraph.jsx */ = {isa = PBXFileReference; lastKnownFileType = text; path = AttackPathGraph.jsx; sourceTree = "<group>"; };
+		EA1E436E3053266500110B87 /* DeviceRelationship.jsx */ = {isa = PBXFileReference; lastKnownFileType = text; path = DeviceRelationship.jsx; sourceTree = "<group>"; };
+		EA1E436F3053266500110B87 /* HeatMap.jsx */ = {isa = PBXFileReference; lastKnownFileType = text; path = HeatMap.jsx; sourceTree = "<group>"; };
+		EA1E43703053266500110B87 /* SecurityScoreChart.jsx */ = {isa = PBXFileReference; lastKnownFileType = text; path = SecurityScoreChart.jsx; sourceTree = "<group>"; };
+		EA1E43713053266500110B87 /* TopologyGraph.jsx */ = {isa = PBXFileReference; lastKnownFileType = text; path = TopologyGraph.jsx; sourceTree = "<group>"; };
+		EA1E43813053267100110B87 /* API_Documentation.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = API_Documentation.md; sourceTree = "<group>"; };
+		EA1E43823053267100110B87 /* Architecture.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Architecture.md; sourceTree = "<group>"; };
+		EA1E43833053267100110B87 /* Installation_Guide.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Installation_Guide.md; sourceTree = "<group>"; };
+		EA1E43843053267100110B87 /* Judge_Demo_Script.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Judge_Demo_Script.md; sourceTree = "<group>"; };
+		EA1E43853053267100110B87 /* Presentation_Notes.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Presentation_Notes.md; sourceTree = "<group>"; };
+		EA1E43863053267100110B87 /* Problem_Statement.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Problem_Statement.md; sourceTree = "<group>"; };
+		EA1E43873053267100110B87 /* User_Manual.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = User_Manual.md; sourceTree = "<group>"; };
+		EA1E43893053267700110B87 /* dashboard_mockup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dashboard_mockup.png; sourceTree = "<group>"; };
+		EA1E438A3053267700110B87 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		EA1E438B3053267700110B87 /* topology_demo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topology_demo.png; sourceTree = "<group>"; };
+		EA1E43B33053BA4700110B87 /* __init__.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
+		EA1E43B43053BA4700110B87 /* anomaly_detector.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = anomaly_detector.py; sourceTree = "<group>"; };
+		EA1E43B63053BA4700110B87 /* llm_prompt.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = llm_prompt.py; sourceTree = "<group>"; };
+		EA1E43B73053BA4700110B87 /* model_loader.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = model_loader.py; sourceTree = "<group>"; };
+		EA1E43B83053BA4700110B87 /* risk_predictor.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = risk_predictor.py; sourceTree = "<group>"; };
+		EA1E43BD3053BA4700110B87 /* __init__.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
+		EA1E43BE3053BA4700110B87 /* attack_path.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = attack_path.py; sourceTree = "<group>"; };
+		EA1E43BF3053BA4700110B87 /* devices.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = devices.py; sourceTree = "<group>"; };
+		EA1E43C03053BA4700110B87 /* findings.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = findings.py; sourceTree = "<group>"; };
+		EA1E43C13053BA4700110B87 /* risk.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = risk.py; sourceTree = "<group>"; };
+		EA1E43C23053BA4700110B87 /* upload.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = upload.py; sourceTree = "<group>"; };
+		EA1E43C43053BA4700110B87 /* __init__.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
+		EA1E43C53053BA4700110B87 /* ai_advisor.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = ai_advisor.py; sourceTree = "<group>"; };
+		EA1E43C63053BA4700110B87 /* audit.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = audit.py; sourceTree = "<group>"; };
+		EA1E43C73053BA4700110B87 /* config_normalizer.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = config_normalizer.py; sourceTree = "<group>"; };
+		EA1E43C83053BA4700110B87 /* security_rules.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = security_rules.py; sourceTree = "<group>"; };
+		EA1E43C93053BA4700110B87 /* r01_telnet.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = r01_telnet.py; sourceTree = "<group>"; };
+		EA1E43CA3053BA4700110B87 /* r02_ssh_exposure.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = r02_ssh_exposure.py; sourceTree = "<group>"; };
+		EA1E43CB3053BA4700110B87 /* r03_any_to_any.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = r03_any_to_any.py; sourceTree = "<group>"; };
+		EA1E43CC3053BA4700110B87 /* r04_broad_access.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = r04_broad_access.py; sourceTree = "<group>"; };
+		EA1E43CD3053BA4700110B87 /* r05_firewall_logging.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = r05_firewall_logging.py; sourceTree = "<group>"; };
+		EA1E43CE3053BA4700110B87 /* r06_insecure_management.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = r06_insecure_management.py; sourceTree = "<group>"; };
+		EA1E43CF3053BA4700110B87 /* r07_weak_ssh.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = r07_weak_ssh.py; sourceTree = "<group>"; };
+		EA1E43D03053BA4700110B87 /* r08_default_credentials.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = r08_default_credentials.py; sourceTree = "<group>"; };
+		EA1E43D13053BA4700110B87 /* r09_unencrypted_management.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = r09_unencrypted_management.py; sourceTree = "<group>"; };
+		EA1E43D23053BA4700110B87 /* r10_missing_logging.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = r10_missing_logging.py; sourceTree = "<group>"; };
+		EA1E43D33053BA4700110B87 /* r11_weak_encryption.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = r11_weak_encryption.py; sourceTree = "<group>"; };
+		EA1E43D43053BA4700110B87 /* r12_admin_access.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = r12_admin_access.py; sourceTree = "<group>"; };
+		EA1E43D53053BA4700110B87 /* r13_audit_logging.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = r13_audit_logging.py; sourceTree = "<group>"; };
+		EA1E43D63053BA4700110B87 /* r14_rule_conflict.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = r14_rule_conflict.py; sourceTree = "<group>"; };
+		EA1E43D73053BA4700110B87 /* r15_baseline.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = r15_baseline.py; sourceTree = "<group>"; };
+		EA1E43D83053BA4700110B87 /* remediation.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = remediation.py; sourceTree = "<group>"; };
+		EA1E43D93053BA4700110B87 /* prioritization.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = prioritization.py; sourceTree = "<group>"; };
+		EA1E43DA3053BA4700110B87 /* risk_score.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = risk_score.py; sourceTree = "<group>"; };
+		EA1E43DC3053BA4700110B87 /* __init__.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
+		EA1E43E83053BA4700110B87 /* __init__.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
+		EA1E43E93053BA4700110B87 /* acl.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = acl.py; sourceTree = "<group>"; };
+		EA1E43EA3053BA4700110B87 /* device.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = device.py; sourceTree = "<group>"; };
+		EA1E43EB3053BA4700110B87 /* finding.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = finding.py; sourceTree = "<group>"; };
+		EA1E43EC3053BA4700110B87 /* interface.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = interface.py; sourceTree = "<group>"; };
+		EA1E43ED3053BA4700110B87 /* service.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = service.py; sourceTree = "<group>"; };
+		EA1E43F53053BA4700110B87 /* __init__.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
+		EA1E43F63053BA4700110B87 /* cisco_parser.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = cisco_parser.py; sourceTree = "<group>"; };
+		EA1E43F73053BA4700110B87 /* fortinet_parser.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = fortinet_parser.py; sourceTree = "<group>"; };
+		EA1E43F93053BA4700110B87 /* paloalto_parser.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = paloalto_parser.py; sourceTree = "<group>"; };
+		EA1E43FB3053BA4700110B87 /* cisco_safe.txt  */ = {isa = PBXFileReference; lastKnownFileType = text; path = "cisco_safe.txt "; sourceTree = "<group>"; };
+		EA1E43FC3053BA4700110B87 /* cisco_vulnerable.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = cisco_vulnerable.txt; sourceTree = "<group>"; };
+		EA1E43FD3053BA4700110B87 /* fortinet_safe.conf */ = {isa = PBXFileReference; lastKnownFileType = text; path = fortinet_safe.conf; sourceTree = "<group>"; };
+		EA1E43FE3053BA4700110B87 /* fortinet_vulnerable.conf */ = {isa = PBXFileReference; lastKnownFileType = text; path = fortinet_vulnerable.conf; sourceTree = "<group>"; };
+		EA1E43FF3053BA4700110B87 /* paloalto_safe.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = paloalto_safe.xml; sourceTree = "<group>"; };
+		EA1E44003053BA4700110B87 /* paloalto_vulnerable.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = paloalto_vulnerable.xml; sourceTree = "<group>"; };
+		EA1E44023053BA4700110B87 /* __init__.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
+		EA1E44033053BA4700110B87 /* device_schema.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = device_schema.py; sourceTree = "<group>"; };
+		EA1E44043053BA4700110B87 /* finding_schema.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = finding_schema.py; sourceTree = "<group>"; };
+		EA1E44053053BA4700110B87 /* risk_schema.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = risk_schema.py; sourceTree = "<group>"; };
+		EA1E44073053BA4700110B87 /* test_api.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = test_api.py; sourceTree = "<group>"; };
+		EA1E44083053BA4700110B87 /* test_cisco_parser.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = test_cisco_parser.py; sourceTree = "<group>"; };
+		EA1E44093053BA4700110B87 /* test_fortinet_parser.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = test_fortinet_parser.py; sourceTree = "<group>"; };
+		EA1E440A3053BA4700110B87 /* test_paloalto_parser.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = test_paloalto_parser.py; sourceTree = "<group>"; };
+		EA1E440B3053BA4700110B87 /* Test_report.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Test_report.md; sourceTree = "<group>"; };
+		EA1E440C3053BA4700110B87 /* test_security_rules.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = test_security_rules.py; sourceTree = "<group>"; };
+		EA1E440E3053BA4700110B87 /* __init__.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
+		EA1E440F3053BA4700110B87 /* file_reader.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = file_reader.py; sourceTree = "<group>"; };
+		EA1E44103053BA4700110B87 /* helpers.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = helpers.py; sourceTree = "<group>"; };
+		EA1E44113053BA4700110B87 /* logger.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = logger.py; sourceTree = "<group>"; };
+		EA1E44133053BA4700110B87 /* config.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = config.py; sourceTree = "<group>"; };
+		EA1E44143053BA4700110B87 /* database.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = database.py; sourceTree = "<group>"; };
+		EA1E44153053BA4700110B87 /* main.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = main.py; sourceTree = "<group>"; };
+		EA1E44163053BA4700110B87 /* requirements.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = requirements.txt; sourceTree = "<group>"; };
+		EA1E44183053BC3E00110B87 /* DeviceTable.jsx */ = {isa = PBXFileReference; lastKnownFileType = text; path = DeviceTable.jsx; sourceTree = "<group>"; };
+		EA1E44193053BC3E00110B87 /* FindingCard.jsx */ = {isa = PBXFileReference; lastKnownFileType = text; path = FindingCard.jsx; sourceTree = "<group>"; };
+		EA1E441A3053BC3E00110B87 /* Navbar.jsx */ = {isa = PBXFileReference; lastKnownFileType = text; path = Navbar.jsx; sourceTree = "<group>"; };
+		EA1E441B3053BC3E00110B87 /* RiskCard.jsx */ = {isa = PBXFileReference; lastKnownFileType = text; path = RiskCard.jsx; sourceTree = "<group>"; };
+		EA1E441C3053BC3E00110B87 /* Sidebar.jsx */ = {isa = PBXFileReference; lastKnownFileType = text; path = Sidebar.jsx; sourceTree = "<group>"; };
+		EA1E441E3053BC9B00110B87 /* AICopilot.jsx */ = {isa = PBXFileReference; lastKnownFileType = text; path = AICopilot.jsx; sourceTree = "<group>"; };
+		EA1E44223053C3AA00110B87 /* security_config.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = security_config.json; sourceTree = "<group>"; };
+		EA1E44243053C47000110B87 /* run_audit.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = run_audit.py; sourceTree = "<group>"; };
+		EA1E44253053C47000110B87 /* test_ai.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = test_ai.py; sourceTree = "<group>"; };
+		EA1E44263053C47000110B87 /* test_audit.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = test_audit.py; sourceTree = "<group>"; };
+		EA1E44273053C47000110B87 /* test_normalizer.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = test_normalizer.py; sourceTree = "<group>"; };
+		EA1E44283053C47000110B87 /* demo_config.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = demo_config.py; sourceTree = "<group>"; };
+		EA1E443A3053C47000110B87 /* test_remediation.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = test_remediation.py; sourceTree = "<group>"; };
+		EA1E443B3053C47000110B87 /* test_prioritization.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = test_prioritization.py; sourceTree = "<group>"; };
+		EA1E443C3053C47000110B87 /* test_security_score.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = test_security_score.py; sourceTree = "<group>"; };
+		EA1E443D3053EA6000110B87 /* remediation.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = remediation.py; sourceTree = "<group>"; };
+		EA1E443E3053EA6000110B87 /* scan.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = scan.py; sourceTree = "<group>"; };
+		EA1E443F3053EAC600110B87 /* explainer.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = explainer.py; sourceTree = "<group>"; };
+		EA1E44403053F5DF00110B87 /* vendor_detector.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = vendor_detector.py; sourceTree = "<group>"; };
+		EA1E44413053F60500110B87 /* id_generator.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = id_generator.py; sourceTree = "<group>"; };
+		EA1E44423053F62600110B87 /* validators.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = validators.py; sourceTree = "<group>"; };
+		EA1E44433053F63C00110B87 /* report_utils.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = report_utils.py; sourceTree = "<group>"; };
+		EA1E44443053F70600110B87 /* conftest.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = conftest.py; sourceTree = "<group>"; };
+		EA1E44453053F8E200110B87 /* normalizer.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = normalizer.py; sourceTree = "<group>"; };
+		EA1E44463053F8EC00110B87 /* attack_graph.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = attack_graph.py; sourceTree = "<group>"; };
+		EA1E44473053F94B00110B87 /* risk_predictor.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = risk_predictor.py; sourceTree = "<group>"; };
+		EA1E44483056727000110B87 /* Report.jsx */ = {isa = PBXFileReference; lastKnownFileType = text; path = Report.jsx; sourceTree = "<group>"; };
+		EA1E44493056D7BF00110B87 /* copilot.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = copilot.py; sourceTree = "<group>"; };
+		EA1E444A3056D7E200110B87 /* copilot.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = copilot.py; sourceTree = "<group>"; };
+		EA1E444B3056D80500110B87 /* copilot.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = copilot.py; sourceTree = "<group>"; };
+		EA1E444C3056DD5500110B87 /* ChatBubble.jsx */ = {isa = PBXFileReference; lastKnownFileType = text; path = ChatBubble.jsx; sourceTree = "<group>"; };
+		EA1E444D3056DD6A00110B87 /* ChatInput.jsx */ = {isa = PBXFileReference; lastKnownFileType = text; path = ChatInput.jsx; sourceTree = "<group>"; };
+		EA1E444E3056E03E00110B87 /* report.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = report.py; sourceTree = "<group>"; };
+		EA1E444F3056E0D000110B87 /* chart_generator.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = chart_generator.py; sourceTree = "<group>"; };
+		EA1E44503056E0EF00110B87 /* pdf_generator.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = pdf_generator.py; sourceTree = "<group>"; };
+		EA1E44513056E1DA00110B87 /* ExecutiveSummary.jsx */ = {isa = PBXFileReference; lastKnownFileType = text; path = ExecutiveSummary.jsx; sourceTree = "<group>"; };
+		EA1E44523056E20200110B87 /* SeveritySummary.jsx */ = {isa = PBXFileReference; lastKnownFileType = text; path = SeveritySummary.jsx; sourceTree = "<group>"; };
+		EA1E44533056E21500110B87 /* SeverityChart.jsx */ = {isa = PBXFileReference; lastKnownFileType = text; path = SeverityChart.jsx; sourceTree = "<group>"; };
+		EA1E44543056E22600110B87 /* ReportPreview.jsx */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReportPreview.jsx; sourceTree = "<group>"; };
+		EA1E44553056EC8100110B87 /* ComplianceChart.jsx */ = {isa = PBXFileReference; lastKnownFileType = text; path = ComplianceChart.jsx; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA1E1D293052721200110B87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA1E1D233052721200110B87 = {
+			isa = PBXGroup;
+			children = (
+				EA1E1DC23052A0BE00110B87 /* README.md */,
+				EA1E1DC33052A0D500110B87 /* LICENSE */,
+				EA1E1DC43052A0F900110B87 /* .gitignore */,
+				EA1E1DCD3052A30300110B87 /* docker-compose.yml */,
+				EA1E44173053BA4700110B87 /* backend */,
+				EA1E1D743052804D00110B87 /* frontend */,
+				EA1E43883053267100110B87 /* docs */,
+				EA1E438C3053267700110B87 /* assets */,
+				EA1E30613053260D00110B87 /* SIH26155 */,
+			);
+			sourceTree = "<group>";
+		};
+		EA1E1D743052804D00110B87 /* frontend */ = {
+			isa = PBXGroup;
+			children = (
+				EA1E1D753052806200110B87 /* package.json */,
+				EA1E1D763052806F00110B87 /* vite.config.js */,
+				EA1E1DC130529F9400110B87 /* index.html */,
+				EA1E1D773052807C00110B87 /* src */,
+			);
+			path = frontend;
+			sourceTree = "<group>";
+		};
+		EA1E1D773052807C00110B87 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				EA1E1D7B305280D900110B87 /* main.jsx */,
+				EA1E1D7C305280EE00110B87 /* App.jsx */,
+				EA1E1DB530528DC700110B87 /* services */,
+				EA1E1D7D3052812300110B87 /* pages */,
+				EA1E441D3053BC3E00110B87 /* components */,
+				EA1E43723053266500110B87 /* visualization */,
+				EA1E1DB730528DEF00110B87 /* styles */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		EA1E1D7D3052812300110B87 /* pages */ = {
+			isa = PBXGroup;
+			children = (
+				EA1E1D7F305289C100110B87 /* Login.jsx */,
+				EA1E1D81305289DE00110B87 /* Upload.jsx */,
+				EA1E1D80305289D000110B87 /* Dashboard.jsx */,
+				EA1E1D82305289ED00110B87 /* Findings.jsx */,
+				EA1E1D8330528A0C00110B87 /* Remediation.jsx */,
+				EA1E441E3053BC9B00110B87 /* AICopilot.jsx */,
+				EA1E44483056727000110B87 /* Report.jsx */,
+			);
+			path = pages;
+			sourceTree = "<group>";
+		};
+		EA1E1DB530528DC700110B87 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				EA1E1DB630528DE100110B87 /* api.js */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		EA1E1DB730528DEF00110B87 /* styles */ = {
+			isa = PBXGroup;
+			children = (
+				EA1E1DB830528DFD00110B87 /* globals.css */,
+			);
+			path = styles;
+			sourceTree = "<group>";
+		};
+		EA1E43723053266500110B87 /* visualization */ = {
+			isa = PBXGroup;
+			children = (
+				EA1E43713053266500110B87 /* TopologyGraph.jsx */,
+				EA1E436D3053266500110B87 /* AttackPathGraph.jsx */,
+				EA1E436E3053266500110B87 /* DeviceRelationship.jsx */,
+				EA1E436F3053266500110B87 /* HeatMap.jsx */,
+				EA1E43703053266500110B87 /* SecurityScoreChart.jsx */,
+			);
+			path = visualization;
+			sourceTree = "<group>";
+		};
+		EA1E43883053267100110B87 /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				EA1E43823053267100110B87 /* Architecture.md */,
+				EA1E43813053267100110B87 /* API_Documentation.md */,
+				EA1E43833053267100110B87 /* Installation_Guide.md */,
+				EA1E43843053267100110B87 /* Judge_Demo_Script.md */,
+				EA1E43853053267100110B87 /* Presentation_Notes.md */,
+				EA1E43863053267100110B87 /* Problem_Statement.md */,
+				EA1E43873053267100110B87 /* User_Manual.md */,
+				EA1E440B3053BA4700110B87 /* Test_report.md */,
+			);
+			path = docs;
+			sourceTree = "<group>";
+		};
+		EA1E438C3053267700110B87 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				EA1E438A3053267700110B87 /* logo.png */,
+				EA1E43893053267700110B87 /* dashboard_mockup.png */,
+				EA1E438B3053267700110B87 /* topology_demo.png */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		EA1E43B93053BA4700110B87 /* ai_engine */ = {
+			isa = PBXGroup;
+			children = (
+				EA1E43B33053BA4700110B87 /* __init__.py */,
+				EA1E44473053F94B00110B87 /* risk_predictor.py */,
+				EA1E443F3053EAC600110B87 /* explainer.py */,
+				EA1E43C53053BA4700110B87 /* ai_advisor.py */,
+				EA1E43B43053BA4700110B87 /* anomaly_detector.py */,
+				EA1E43B83053BA4700110B87 /* risk_predictor.py */,
+				EA1E43B63053BA4700110B87 /* llm_prompt.py */,
+				EA1E43B73053BA4700110B87 /* model_loader.py */,
+				EA1E444A3056D7E200110B87 /* copilot.py */,
+			);
+			path = ai_engine;
+			sourceTree = "<group>";
+		};
+		EA1E43C33053BA4700110B87 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				EA1E43BD3053BA4700110B87 /* __init__.py */,
+				EA1E443D3053EA6000110B87 /* remediation.py */,
+				EA1E443E3053EA6000110B87 /* scan.py */,
+				EA1E43C23053BA4700110B87 /* upload.py */,
+				EA1E43BF3053BA4700110B87 /* devices.py */,
+				EA1E43C03053BA4700110B87 /* findings.py */,
+				EA1E43C13053BA4700110B87 /* risk.py */,
+				EA1E43BE3053BA4700110B87 /* attack_path.py */,
+				EA1E444E3056E03E00110B87 /* report.py */,
+				EA1E44493056D7BF00110B87 /* copilot.py */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		EA1E43DB3053BA4700110B87 /* rules */ = {
+			isa = PBXGroup;
+			children = (
+				EA1E43C43053BA4700110B87 /* __init__.py */,
+				EA1E43C93053BA4700110B87 /* r01_telnet.py */,
+				EA1E43CA3053BA4700110B87 /* r02_ssh_exposure.py */,
+				EA1E43CB3053BA4700110B87 /* r03_any_to_any.py */,
+				EA1E43CC3053BA4700110B87 /* r04_broad_access.py */,
+				EA1E43CD3053BA4700110B87 /* r05_firewall_logging.py */,
+				EA1E43CE3053BA4700110B87 /* r06_insecure_management.py */,
+				EA1E43CF3053BA4700110B87 /* r07_weak_ssh.py */,
+				EA1E43D03053BA4700110B87 /* r08_default_credentials.py */,
+				EA1E43D13053BA4700110B87 /* r09_unencrypted_management.py */,
+				EA1E43D23053BA4700110B87 /* r10_missing_logging.py */,
+				EA1E43D33053BA4700110B87 /* r11_weak_encryption.py */,
+				EA1E43D43053BA4700110B87 /* r12_admin_access.py */,
+				EA1E43D53053BA4700110B87 /* r13_audit_logging.py */,
+				EA1E43D63053BA4700110B87 /* r14_rule_conflict.py */,
+				EA1E43D73053BA4700110B87 /* r15_baseline.py */,
+			);
+			path = rules;
+			sourceTree = "<group>";
+		};
+		EA1E43E03053BA4700110B87 /* engine */ = {
+			isa = PBXGroup;
+			children = (
+				EA1E43DC3053BA4700110B87 /* __init__.py */,
+				EA1E43C63053BA4700110B87 /* audit.py */,
+				EA1E43C83053BA4700110B87 /* security_rules.py */,
+				EA1E43DA3053BA4700110B87 /* risk_score.py */,
+				EA1E43D93053BA4700110B87 /* prioritization.py */,
+				EA1E43D83053BA4700110B87 /* remediation.py */,
+				EA1E44463053F8EC00110B87 /* attack_graph.py */,
+				EA1E43DB3053BA4700110B87 /* rules */,
+			);
+			path = engine;
+			sourceTree = "<group>";
+		};
+		EA1E43EE3053BA4700110B87 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				EA1E43E83053BA4700110B87 /* __init__.py */,
+				EA1E44223053C3AA00110B87 /* security_config.json */,
+				EA1E43EA3053BA4700110B87 /* device.py */,
+				EA1E43EB3053BA4700110B87 /* finding.py */,
+				EA1E43E93053BA4700110B87 /* acl.py */,
+				EA1E43EC3053BA4700110B87 /* interface.py */,
+				EA1E43ED3053BA4700110B87 /* service.py */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		EA1E43FA3053BA4700110B87 /* parsers */ = {
+			isa = PBXGroup;
+			children = (
+				EA1E43F53053BA4700110B87 /* __init__.py */,
+				EA1E44453053F8E200110B87 /* normalizer.py */,
+				EA1E43F63053BA4700110B87 /* cisco_parser.py */,
+				EA1E43F73053BA4700110B87 /* fortinet_parser.py */,
+				EA1E43F93053BA4700110B87 /* paloalto_parser.py */,
+				EA1E43C73053BA4700110B87 /* config_normalizer.py */,
+			);
+			path = parsers;
+			sourceTree = "<group>";
+		};
+		EA1E44013053BA4700110B87 /* sample_configs */ = {
+			isa = PBXGroup;
+			children = (
+				EA1E44283053C47000110B87 /* demo_config.py */,
+				EA1E43FB3053BA4700110B87 /* cisco_safe.txt  */,
+				EA1E43FC3053BA4700110B87 /* cisco_vulnerable.txt */,
+				EA1E43FD3053BA4700110B87 /* fortinet_safe.conf */,
+				EA1E43FE3053BA4700110B87 /* fortinet_vulnerable.conf */,
+				EA1E43FF3053BA4700110B87 /* paloalto_safe.xml */,
+				EA1E44003053BA4700110B87 /* paloalto_vulnerable.xml */,
+			);
+			path = sample_configs;
+			sourceTree = "<group>";
+		};
+		EA1E44063053BA4700110B87 /* schemas */ = {
+			isa = PBXGroup;
+			children = (
+				EA1E44023053BA4700110B87 /* __init__.py */,
+				EA1E44033053BA4700110B87 /* device_schema.py */,
+				EA1E44043053BA4700110B87 /* finding_schema.py */,
+				EA1E44053053BA4700110B87 /* risk_schema.py */,
+				EA1E444B3056D80500110B87 /* copilot.py */,
+			);
+			path = schemas;
+			sourceTree = "<group>";
+		};
+		EA1E440D3053BA4700110B87 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				EA1E44443053F70600110B87 /* conftest.py */,
+				EA1E44243053C47000110B87 /* run_audit.py */,
+				EA1E44073053BA4700110B87 /* test_api.py */,
+				EA1E44253053C47000110B87 /* test_ai.py */,
+				EA1E44263053C47000110B87 /* test_audit.py */,
+				EA1E44273053C47000110B87 /* test_normalizer.py */,
+				EA1E440C3053BA4700110B87 /* test_security_rules.py */,
+				EA1E443C3053C47000110B87 /* test_security_score.py */,
+				EA1E443B3053C47000110B87 /* test_prioritization.py */,
+				EA1E443A3053C47000110B87 /* test_remediation.py */,
+				EA1E44083053BA4700110B87 /* test_cisco_parser.py */,
+				EA1E44093053BA4700110B87 /* test_fortinet_parser.py */,
+				EA1E440A3053BA4700110B87 /* test_paloalto_parser.py */,
+			);
+			path = tests;
+			sourceTree = "<group>";
+		};
+		EA1E44123053BA4700110B87 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				EA1E440E3053BA4700110B87 /* __init__.py */,
+				EA1E440F3053BA4700110B87 /* file_reader.py */,
+				EA1E44103053BA4700110B87 /* helpers.py */,
+				EA1E44113053BA4700110B87 /* logger.py */,
+				EA1E44403053F5DF00110B87 /* vendor_detector.py */,
+				EA1E44413053F60500110B87 /* id_generator.py */,
+				EA1E44423053F62600110B87 /* validators.py */,
+				EA1E44433053F63C00110B87 /* report_utils.py */,
+				EA1E444F3056E0D000110B87 /* chart_generator.py */,
+				EA1E44503056E0EF00110B87 /* pdf_generator.py */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		EA1E44173053BA4700110B87 /* backend */ = {
+			isa = PBXGroup;
+			children = (
+				EA1E44153053BA4700110B87 /* main.py */,
+				EA1E44133053BA4700110B87 /* config.py */,
+				EA1E44143053BA4700110B87 /* database.py */,
+				EA1E44163053BA4700110B87 /* requirements.txt */,
+				EA1E43C33053BA4700110B87 /* api */,
+				EA1E43FA3053BA4700110B87 /* parsers */,
+				EA1E43E03053BA4700110B87 /* engine */,
+				EA1E43B93053BA4700110B87 /* ai_engine */,
+				EA1E43EE3053BA4700110B87 /* models */,
+				EA1E44063053BA4700110B87 /* schemas */,
+				EA1E44123053BA4700110B87 /* utils */,
+				EA1E440D3053BA4700110B87 /* tests */,
+				EA1E44013053BA4700110B87 /* sample_configs */,
+			);
+			path = backend;
+			sourceTree = "<group>";
+		};
+		EA1E441D3053BC3E00110B87 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				EA1E441A3053BC3E00110B87 /* Navbar.jsx */,
+				EA1E441C3053BC3E00110B87 /* Sidebar.jsx */,
+				EA1E44183053BC3E00110B87 /* DeviceTable.jsx */,
+				EA1E44193053BC3E00110B87 /* FindingCard.jsx */,
+				EA1E441B3053BC3E00110B87 /* RiskCard.jsx */,
+				EA1E444C3056DD5500110B87 /* ChatBubble.jsx */,
+				EA1E444D3056DD6A00110B87 /* ChatInput.jsx */,
+				EA1E44513056E1DA00110B87 /* ExecutiveSummary.jsx */,
+				EA1E44523056E20200110B87 /* SeveritySummary.jsx */,
+				EA1E44533056E21500110B87 /* SeverityChart.jsx */,
+				EA1E44553056EC8100110B87 /* ComplianceChart.jsx */,
+				EA1E44543056E22600110B87 /* ReportPreview.jsx */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA1E1D2B3052721200110B87 /* SIH26155 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA1E1D333052721200110B87 /* Build configuration list for PBXNativeTarget "SIH26155" */;
+			buildPhases = (
+				EA1E1D283052721200110B87 /* Sources */,
+				EA1E1D293052721200110B87 /* Frameworks */,
+				EA1E1D2A3052721200110B87 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SIH26155;
+			packageProductDependencies = (
+			);
+			productName = SIH26155;
+			productReference = EA1E30613053260D00110B87 /* SIH26155 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA1E1D243052721200110B87 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2660;
+				LastUpgradeCheck = 2660;
+				TargetAttributes = {
+					EA1E1D2B3052721200110B87 = {
+						CreatedOnToolsVersion = 26.6;
+					};
+				};
+			};
+			buildConfigurationList = EA1E1D273052721200110B87 /* Build configuration list for PBXProject "SIH26155" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA1E1D233052721200110B87;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = EA1E1D233052721200110B87;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA1E1D2B3052721200110B87 /* SIH26155 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA1E1D283052721200110B87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EA1E1D313052721200110B87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EA1E1D323052721200110B87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		EA1E1D343052721200110B87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		EA1E1D353052721200110B87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA1E1D273052721200110B87 /* Build configuration list for PBXProject "SIH26155" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA1E1D313052721200110B87 /* Debug */,
+				EA1E1D323052721200110B87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA1E1D333052721200110B87 /* Build configuration list for PBXNativeTarget "SIH26155" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA1E1D343052721200110B87 /* Debug */,
+				EA1E1D353052721200110B87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA1E1D243052721200110B87 /* Project object */;
+}

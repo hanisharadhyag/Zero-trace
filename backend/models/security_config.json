@@ -1,0 +1,104 @@
+{
+  "device": {
+    "hostname": "EDGE-GW-01",
+    "vendor": "Cisco",
+    "model": "ISR4451",
+    "os_version": "17.3.4"
+  },
+
+  "management": {
+    "telnet_enabled": false,
+    "ssh_enabled": true,
+    "ssh_port": 22,
+    "http_management_enabled": false,
+    "https_management_enabled": true,
+    "ftp_management_enabled": false,
+    "allowed_management_sources": [
+      "10.100.0.0/24"
+    ]
+  },
+
+  "ssh": {
+    "password_authentication": false,
+    "key_authentication_required": true
+  },
+
+  "credentials": {
+    "default_credentials_enabled": false
+  },
+
+  "admin_access": {
+    "allowed_sources": [
+      "10.100.0.5"
+    ]
+  },
+
+  "firewall_rules": [
+    {
+      "id": "RULE-101",
+      "action": "DENY",
+      "source": [
+        "192.168.1.50"
+      ],
+      "destination": [
+        "10.0.0.10"
+      ],
+      "protocol": [
+        "TCP"
+      ],
+      "ports": [
+        "80"
+      ],
+      "logging_enabled": true,
+      "position": 1
+    },
+    {
+      "id": "RULE-102",
+      "action": "ALLOW",
+      "source": [
+        "10.100.0.0/24"
+      ],
+      "destination": [
+        "INTERNAL_SERVER"
+      ],
+      "protocol": [
+        "TCP"
+      ],
+      "ports": [
+        "443"
+      ],
+      "logging_enabled": true,
+      "position": 2
+    }
+  ],
+
+  "logging": {
+    "enabled": true,
+    "firewall_logging_enabled": true,
+    "firewall_logging_required": true,
+    "central_logging_enabled": true,
+    "central_logging_required": true,
+    "log_server": "10.100.0.250",
+    "authentication_logging": true,
+    "configuration_change_logging": true,
+    "security_event_logging": true
+  },
+
+  "encryption": {
+    "tls_enabled": true,
+    "tls_versions": [
+      "TLSv1.2",
+      "TLSv1.3"
+    ],
+    "enabled_algorithms": [
+      "AES-256-GCM",
+      "CHACHA20-POLY1305"
+    ],
+    "weak_ciphers": []
+  },
+
+  "telnet_enabled": false,
+  "ssh_enabled": true,
+  "logging_enabled": true,
+  "strong_encryption": true
+}

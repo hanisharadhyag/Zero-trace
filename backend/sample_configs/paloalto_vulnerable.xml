@@ -1,0 +1,8 @@
+<config>
+  <devices>
+    <entry>
+      <hostname>PA-01</hostname>
+      <interface name="ethernet1/1"/>
+    </entry>
+  </devices>
+</config>

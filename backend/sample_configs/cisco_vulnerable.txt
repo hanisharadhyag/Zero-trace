@@ -1,0 +1,4 @@
+hostname ROUTER-01
+
+line vty 0 4
+ transport input telnet

@@ -1,0 +1,9 @@
+<config>
+  <devices>
+    <entry>
+      <hostname>PA-01</hostname>
+      <ssh/>
+      <interface name="ethernet1/1"/>
+    </entry>
+  </devices>
+</config>

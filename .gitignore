@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+
+# SQLite
+*.db
+
+# Logs
+logs/
+*.log
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# macOS
+.DS_Store
+
+# Xcode
+DerivedData/
+
+# Uploads
+backend/uploads/
