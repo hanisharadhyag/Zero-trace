@@ -6,8 +6,11 @@ import { CardSkeleton } from "../components/LoadingSkeleton";
 import GlassCard from "../components/GlassCard";
 import GlowBadge from "../components/GlowBadge";
 import DeviceTable from "../components/DeviceTable";
+import ConfigurationDrift from "../components/ConfigurationDrift";
+import SecurityStatusPanel from "../components/SecurityStatusPanel";
 import AttackPathGraph from "../visualization/AttackPathGraph";
 import { Shield, Server, Activity, AlertTriangle, AlertCircle, Info, TrendingUp } from "lucide-react";
+
 
 /* ── Security Gauge ──────────────────────────────────────── */
 function SecurityGauge({ score }) {
@@ -232,8 +235,14 @@ export default function Dashboard() {
         <KPICard title="High"        value={risk.high}     Icon={AlertTriangle} color="#F97316" delay={0.15} />
         <KPICard title="Medium"      value={risk.medium}   Icon={Activity}      color="#EAB308" delay={0.20} />
         <KPICard title="Low"         value={risk.low}      Icon={Info}          color="#22C55E" delay={0.25} />
-        <KPICard title="Total Issues" value={risk.critical + risk.high + risk.medium + risk.low} Icon={Shield} color="#60A5FA" delay={0.30} />
       </div>
+
+      {/* Configuration Drift Section */}
+      <ConfigurationDrift currentDevice={device} />
+
+      {/* Zero Trust File Access & Audit Log Panel */}
+      <SecurityStatusPanel />
+
 
       {/* Network Interfaces Table */}
       <GlassCard style={{ marginBottom: 28 }}>

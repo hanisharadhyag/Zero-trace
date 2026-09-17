@@ -40,9 +40,17 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+from api.auth import router as auth_router
+from api.drift import router as drift_router
+from api.zero_trust import router as zero_trust_router
+
 # ----------------------------------------------------
 # API Routers
 # ----------------------------------------------------
+app.include_router(auth_router, prefix="/api", tags=["Authentication"])
+app.include_router(drift_router, prefix="/api", tags=["Configuration Drift"])
+app.include_router(zero_trust_router, prefix="/api", tags=["Zero Trust File Access"])
+
 app.include_router(upload_router, prefix="/api", tags=["Upload"])
 app.include_router(device_router, prefix="/api", tags=["Devices"])
 app.include_router(findings_router, prefix="/api", tags=["Findings"])
@@ -54,6 +62,7 @@ app.include_router(copilot_router)
 
 # Executive Report (DO NOT add another /api prefix)
 app.include_router(report_router)
+
 
 # ----------------------------------------------------
 # System APIs

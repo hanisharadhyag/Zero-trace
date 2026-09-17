@@ -150,14 +150,104 @@ class SecurityScoreModel(Base):
     scan_timestamp = Column(DateTime, default=datetime.utcnow)
 
 
+class UserModel(Base):
+    __tablename__ = "users"
+
+    id = Column(Integer, primary_key=True, index=True)
+    email = Column(String, unique=True, index=True, nullable=False)
+    username = Column(String, nullable=False)
+    hashed_password = Column(String, nullable=False)
+    role = Column(String, default="Security Analyst")  # Admin, Security Analyst, Viewer, Guest
+    project_id = Column(Integer, default=1, index=True)
+
+    created_at = Column(DateTime, default=datetime.utcnow)
+
+
+class ProjectModel(Base):
+    __tablename__ = "projects"
+
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String, nullable=False)
+    description = Column(Text, nullable=True)
+
+    created_at = Column(DateTime, default=datetime.utcnow)
+
+
+class ConfigFileModel(Base):
+    __tablename__ = "config_files"
+
+    id = Column(Integer, primary_key=True, index=True)
+    device_hostname = Column(String, index=True, nullable=False)
+    vendor = Column(String, nullable=False)
+    version_label = Column(String, nullable=False, default="v1")
+    file_path = Column(String, nullable=False)
+    sha256_hash = Column(String, nullable=False)
+
+    project_id = Column(Integer, index=True, nullable=False)
+    uploaded_by = Column(Integer, nullable=False)
+    uploaded_by_username = Column(String, nullable=False)
+
+    created_at = Column(DateTime, default=datetime.utcnow)
+
+
+class AuditLogModel(Base):
+    __tablename__ = "audit_logs"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, index=True, nullable=False)
+    username = Column(String, nullable=False)
+    project_id = Column(Integer, index=True, nullable=False)
+    file_id = Column(Integer, nullable=True)
+
+    action = Column(String, index=True, nullable=False) # upload, view, download, analyze, compare, delete, failed_auth, integrity_mismatch
+    result = Column(String, nullable=False)            # ALLOWED, DENIED, ERROR
+    reason = Column(Text, nullable=False)
+
+    timestamp = Column(DateTime, default=datetime.utcnow)
+
+
 # ---------------------------------------------------------------------
 # Initialization
 # ---------------------------------------------------------------------
 
 
 def init_database():
-    """Create database tables during application startup."""
+    """Create database tables during application startup and seed initial project/users."""
     Base.metadata.create_all(bind=engine)
+    
+    # Seed default project & users if missing
+    db = SessionLocal()
+    try:
+        if not db.query(ProjectModel).filter(ProjectModel.id == 1).first():
+            db.add(ProjectModel(id=1, name="Default Enterprise Network", description="Primary production network security monitoring project"))
+            db.commit()
+
+        if not db.query(ProjectModel).filter(ProjectModel.id == 2).first():
+            db.add(ProjectModel(id=2, name="Secondary Isolated Network", description="Isolated testing network project for isolation tests"))
+            db.commit()
+
+        # Simple seed password hash helper to avoid circular imports during init
+        import hashlib
+        def _quick_hash(pwd: str) -> str:
+            return hashlib.sha256(f"salt_zerotrace_2026_{pwd}".encode()).hexdigest()
+
+        seed_users = [
+            ("admin@zerotrace.ai", "admin", _quick_hash("admin123"), "Admin", 1),
+            ("analyst@zerotrace.ai", "analyst", _quick_hash("analyst123"), "Security Analyst", 1),
+            ("viewer@zerotrace.ai", "viewer", _quick_hash("viewer123"), "Viewer", 1),
+            ("guest@zerotrace.ai", "guest", _quick_hash("guest123"), "Guest", 1),
+            ("other_user@zerotrace.ai", "other_analyst", _quick_hash("other123"), "Security Analyst", 2),
+        ]
+
+        for email, uname, hpwd, role, pid in seed_users:
+            if not db.query(UserModel).filter(UserModel.email == email).first():
+                db.add(UserModel(email=email, username=uname, hashed_password=hpwd, role=role, project_id=pid))
+        db.commit()
+    except Exception as e:
+        db.rollback()
+    finally:
+        db.close()
+
 
 
 # Create immediately if file doesn't exist
@@ -426,3 +516,145 @@ class DatabaseManager:
 
         finally:
             db.close()
+
+    # ---------------- USERS & AUTH ----------------
+
+    def get_user_by_email(self, email: str) -> Optional[UserModel]:
+        db = self.get_session()
+        try:
+            return db.query(UserModel).filter(UserModel.email == email.strip().lower()).first()
+        finally:
+            db.close()
+
+    def get_user_by_id(self, user_id: int) -> Optional[UserModel]:
+        db = self.get_session()
+        try:
+            return db.query(UserModel).filter(UserModel.id == user_id).first()
+        finally:
+            db.close()
+
+    # ---------------- CONFIG FILES ----------------
+
+    def save_config_file(
+        self,
+        device_hostname: str,
+        vendor: str,
+        version_label: str,
+        file_path: str,
+        sha256_hash: str,
+        project_id: int,
+        uploaded_by: int,
+        uploaded_by_username: str,
+    ) -> ConfigFileModel:
+        db = self.get_session()
+        try:
+            file_rec = ConfigFileModel(
+                device_hostname=device_hostname,
+                vendor=vendor,
+                version_label=version_label,
+                file_path=file_path,
+                sha256_hash=sha256_hash,
+                project_id=project_id,
+                uploaded_by=uploaded_by,
+                uploaded_by_username=uploaded_by_username,
+            )
+            db.add(file_rec)
+            db.commit()
+            db.refresh(file_rec)
+            return file_rec
+        finally:
+            db.close()
+
+    def get_config_file(self, file_id: int) -> Optional[ConfigFileModel]:
+        db = self.get_session()
+        try:
+            return db.query(ConfigFileModel).filter(ConfigFileModel.id == file_id).first()
+        finally:
+            db.close()
+
+    def get_config_files_by_project(self, project_id: int) -> List[ConfigFileModel]:
+        db = self.get_session()
+        try:
+            return db.query(ConfigFileModel).filter(ConfigFileModel.project_id == project_id).order_by(ConfigFileModel.created_at.desc()).all()
+        finally:
+            db.close()
+
+    def get_config_files_by_hostname(self, project_id: int, hostname: str) -> List[ConfigFileModel]:
+        db = self.get_session()
+        try:
+            return (
+                db.query(ConfigFileModel)
+                .filter(ConfigFileModel.project_id == project_id, ConfigFileModel.device_hostname == hostname)
+                .order_by(ConfigFileModel.created_at.asc())
+                .all()
+            )
+        finally:
+            db.close()
+
+    def delete_config_file(self, file_id: int):
+        db = self.get_session()
+        try:
+            file_rec = db.query(ConfigFileModel).filter(ConfigFileModel.id == file_id).first()
+            if file_rec:
+                db.delete(file_rec)
+                db.commit()
+        finally:
+            db.close()
+
+    # ---------------- AUDIT LOGS ----------------
+
+    def save_audit_log(
+        self,
+        user_id: int,
+        username: str,
+        project_id: int,
+        file_id: Optional[int],
+        action: str,
+        result: str,
+        reason: str,
+    ) -> AuditLogModel:
+        db = self.get_session()
+        try:
+            log_rec = AuditLogModel(
+                user_id=user_id,
+                username=username,
+                project_id=project_id,
+                file_id=file_id,
+                action=action,
+                result=result,
+                reason=reason,
+            )
+            db.add(log_rec)
+            db.commit()
+            db.refresh(log_rec)
+            return log_rec
+        finally:
+            db.close()
+
+    def get_audit_logs(self, project_id: int, limit: int = 50) -> List[Dict[str, Any]]:
+        db = self.get_session()
+        try:
+            logs = (
+                db.query(AuditLogModel)
+                .filter(AuditLogModel.project_id == project_id)
+                .order_by(AuditLogModel.timestamp.desc())
+                .limit(limit)
+                .all()
+            )
+            return [
+                {
+                    "id": l.id,
+                    "user_id": l.user_id,
+                    "username": l.username,
+                    "project_id": l.project_id,
+                    "file_id": l.file_id,
+                    "action": l.action,
+                    "result": l.result,
+                    "reason": l.reason,
+                    "timestamp": l.timestamp.isoformat(),
+                }
+                for l in logs
+            ]
+        finally:
+            db.close()
+

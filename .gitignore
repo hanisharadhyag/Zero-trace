@@ -22,5 +22,8 @@ dist/
 # Xcode
 DerivedData/
 
-# Uploads
+# Uploads & Storage
 backend/uploads/
+backend/protected_storage/
+backend/data/
+

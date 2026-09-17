@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Shield, Lock, Mail, Eye, EyeOff, Check, AlertCircle, Sparkles, ArrowRight } from "lucide-react";
 import { toast } from "../components/Toast";
+import { loginUser } from "../services/api";
 
 const DEMO_EMAIL = "admin@zerotrace.ai";
 const DEMO_PASS  = "admin123";
@@ -14,7 +15,8 @@ export default function Login({ onLogin }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
+
     e?.preventDefault();
     setError("");
 
@@ -25,27 +27,33 @@ export default function Login({ onLogin }) {
 
     setLoading(true);
 
-    setTimeout(() => {
-      // Demo validation
-      if (email.trim().toLowerCase() === DEMO_EMAIL && password === DEMO_PASS) {
+    try {
+      const res = await loginUser(email.trim(), password);
+      if (res && res.access_token) {
+        const storage = rememberMe ? localStorage : sessionStorage;
+        storage.setItem("zero_trace_auth", "true");
+        storage.setItem("zero_trace_token", res.access_token);
+        storage.setItem("zero_trace_user", JSON.stringify(res.user));
+
         if (rememberMe) {
-          localStorage.setItem("zero_trace_auth", "true");
           localStorage.setItem("zero_trace_remember", "true");
           localStorage.setItem("zero_trace_remember_email", email);
         } else {
-          sessionStorage.setItem("zero_trace_auth", "true");
           localStorage.removeItem("zero_trace_remember");
           localStorage.removeItem("zero_trace_remember_email");
         }
-        toast.success("Authentication successful! Welcome to Zero-Trace.");
+
+        toast.success(`Authentication successful! Logged in as ${res.user.role}.`);
         onLogin();
-      } else {
-        setLoading(false);
-        setError("Invalid credentials. Use demo: admin@zerotrace.ai / admin123");
-        toast.error("Authentication failed. Please verify credentials.");
       }
-    }, 600);
+    } catch (err) {
+      setLoading(false);
+      const msg = err?.response?.data?.detail || "Authentication failed. Please verify credentials.";
+      setError(msg);
+      toast.error(msg);
+    }
   };
+
 
   const autoFillDemo = () => {
     setEmail(DEMO_EMAIL);

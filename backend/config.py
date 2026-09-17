@@ -17,9 +17,20 @@ REPORT_DIR = ROOT_DIR / "reports"
 LOG_DIR = ROOT_DIR / "logs"
 TEMP_DIR = ROOT_DIR / "temp"
 
+PROTECTED_STORAGE_DIR = ROOT_DIR / "protected_storage"
+
 # Create folders automatically
-for folder in [DATA_DIR, UPLOAD_DIR, REPORT_DIR, LOG_DIR, TEMP_DIR]:
+for folder in [DATA_DIR, UPLOAD_DIR, REPORT_DIR, LOG_DIR, TEMP_DIR, PROTECTED_STORAGE_DIR]:
     folder.mkdir(exist_ok=True)
+
+# ==========================================================
+# Authentication & Security Configuration
+# ==========================================================
+
+JWT_SECRET_KEY = "zero_trace_super_secret_jwt_key_sih2026_enterprise"
+JWT_ALGORITHM = "HS256"
+JWT_ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24 # 24 hours
+
 
 # ==========================================================
 # Database
